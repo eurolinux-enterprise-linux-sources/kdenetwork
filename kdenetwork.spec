@@ -3,7 +3,7 @@ Summary: KDE Network Applications
 Name:    kdenetwork
 Epoch:   7
 Version: 4.10.5
-Release: 5%{?dist}
+Release: 7%{?dist}
 
 License: GPLv2
 URL:     http://www.kde.org
@@ -491,6 +491,12 @@ fi
 
 
 %changelog
+* Tue Jan 28 2014 Daniel Mach <dmach@redhat.com> - 7:4.10.5-7
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 7:4.10.5-6
+- Mass rebuild 2013-12-27
+
 * Tue Oct 29 2013 Jan Grulich <jgrulich@redhat.com> - 7:4.10.5-5
 - Do not crash if closing one of two vnc connection to the same server
 - Resolves #1008890
