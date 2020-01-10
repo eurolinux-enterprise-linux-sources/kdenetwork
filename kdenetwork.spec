@@ -3,7 +3,7 @@ Summary: KDE Network Applications
 Name:    kdenetwork
 Epoch:   7
 Version: 4.10.5
-Release: 7%{?dist}
+Release: 8%{?dist}
 
 License: GPLv2
 URL:     http://www.kde.org
@@ -38,6 +38,7 @@ Patch53: kdenetwork-4.10.5-krdc-bz#1008890.patch
 Patch100: kdenetwork-4.10.5-freerdp.patch
 
 ## security patches
+Patch1000: kdenetwork-4.10.5-CVE-2014-6055.patch
 
 %if 0%{?fedora}
 BuildRequires: openslp-devel
@@ -232,6 +233,7 @@ Requires: %{name}-krfb = %{epoch}:%{version}-%{release}
 %patch52 -p1 -b .doc
 %patch53 -p1 -b .krdc-bz#1008890
 %patch100 -p1 -b .freerdp
+%patch1000 -p1 -b .2014-6055
 
 %if 0%{?use_system_iris:1}
 mv kopete/protocols/jabber/libiris \
@@ -491,6 +493,9 @@ fi
 
 
 %changelog
+* Fri Oct 31 2014 Than Ngo <than@redhat.com> - 7:4.10.5-8
+- Resolves: CVE-2014-6055
+
 * Tue Jan 28 2014 Daniel Mach <dmach@redhat.com> - 7:4.10.5-7
 - Mass rebuild 2014-01-24
 
