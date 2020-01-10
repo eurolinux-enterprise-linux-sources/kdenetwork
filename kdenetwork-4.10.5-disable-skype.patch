@@ -1,0 +1,12 @@
+diff -up kdenetwork-4.10.5/kopete/protocols/CMakeLists.txt.orig kdenetwork-4.10.5/kopete/protocols/CMakeLists.txt
+--- kdenetwork-4.10.5/kopete/protocols/CMakeLists.txt.orig	2013-07-18 14:30:58.224744212 +0200
++++ kdenetwork-4.10.5/kopete/protocols/CMakeLists.txt	2013-07-18 14:33:53.009212538 +0200
+@@ -17,7 +17,7 @@ option(WITH_irc "Enable Kopete IRC proto
+ option(WITH_wlm "Enable Window Live Messenger support" ON)
+ option(WITH_WLM_MEDIASTREAMER "Enable Windows Live Messenger voice clip support" ON)
+ option(WITH_meanwhile "Enable Kopete meanwhile protocol" ON)
+-option(WITH_skype "Enable Kopete Skype protocol" ON)
++option(WITH_skype "Enable Kopete Skype protocol" OFF)
+ 
+ if(LIBORTP_FOUND AND SPEEX_FOUND AND ALSA_FOUND AND WITH_JINGLE)
+   message(STATUS "Building jingle support")
